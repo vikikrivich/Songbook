@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "366225352147",
+    "firebase_url": "https://songbook-f1a97-default-rtdb.firebaseio.com",
+    "project_id": "songbook-f1a97",
+    "storage_bucket": "songbook-f1a97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366225352147:android:75af639830bf235627bb26",
+        "android_client_info": {
+          "package_name": "com.example.songbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366225352147-celhop27f8d6uc9dg14kq75r9qtfli81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiizDoah5QSkOQ6GITwgqR2uyBMTQJzm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "366225352147-celhop27f8d6uc9dg14kq75r9qtfli81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
