@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newsong">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/rounded">
+
+        <ImageView
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="3dp"
+            app:srcCompat="@drawable/plus_1" />
+
+        <EditText
+            android:id="@+id/songname"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/plus"
+            android:fontFamily="@font/daray"
+            android:hint="@string/newsong"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:padding="5dp"
+            android:background="@null"/>
+
+
+    </RelativeLayout>
+
+    <ToggleButton
+        android:id="@+id/togglebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        android:background="@drawable/toggle"
+        android:textOn="@string/local"
+        android:textOff="@string/publicsong"
+        android:fontFamily="@font/daray"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="8dp"
+        android:textSize="22sp"/>
+
+    <RelativeLayout
+        android:id="@+id/singer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/togglebutton"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="22dp">
+
+        <TextView
+            android:id="@+id/singertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/singertext"
+            android:textSize="24sp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/daray"
+            android:layout_marginEnd="5dp"/>
+
+        <EditText
+            android:id="@+id/singerinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:background="@drawable/rec"
+            android:layout_toEndOf="@+id/singertext"
+            android:hint="@string/singer"
+            android:fontFamily="@font/daray"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:padding="12dp"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/am"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/t"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/am" />
+
+    <ImageView
+        android:id="@+id/t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/ok"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/t" />
+
+    <ImageView
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/ok" />
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textMultiLine"
+        android:layout_marginHorizontal="22dp"
+        android:background="@drawable/rec"
+        android:layout_below="@+id/singer"
+        android:layout_above="@+id/back"
+        android:textColor="@color/black"
+        android:hint="@string/newsong"
+        android:fontFamily="@font/daray"
+        android:padding="8dp"
+        android:textSize="24sp"
+        android:gravity="top|left"
+        android:overScrollMode="always"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"/>
+
+
+
+</RelativeLayout>

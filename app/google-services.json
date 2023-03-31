@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "366225352147",
-    "firebase_url": "https://songbook-f1a97-default-rtdb.firebaseio.com",
-    "project_id": "songbook-f1a97",
-    "storage_bucket": "songbook-f1a97.appspot.com"
+    "project_number": "311086924154",
+    "firebase_url": "https://songbook-6e7b7-default-rtdb.firebaseio.com",
+    "project_id": "songbook-6e7b7",
+    "storage_bucket": "songbook-6e7b7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:366225352147:android:75af639830bf235627bb26",
+        "mobilesdk_app_id": "1:311086924154:android:251088162f504f89c956c3",
         "android_client_info": {
           "package_name": "com.example.songbook"
         }
       },
       "oauth_client": [
         {
-          "client_id": "366225352147-celhop27f8d6uc9dg14kq75r9qtfli81.apps.googleusercontent.com",
+          "client_id": "311086924154-ttgstm91gi57usutcdq1spdom5upfcqb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDiizDoah5QSkOQ6GITwgqR2uyBMTQJzm0"
+          "current_key": "AIzaSyAAFmsMl-6qhVtgJX_qw7XueVZOKF-SNMQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "366225352147-celhop27f8d6uc9dg14kq75r9qtfli81.apps.googleusercontent.com",
+              "client_id": "311086924154-07cm1fbh1t6jlp6ci18988ulivishdhj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

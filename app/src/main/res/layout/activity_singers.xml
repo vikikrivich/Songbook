@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".singers">
+
+    <RelativeLayout
+        android:id="@+id/singers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded"
+        android:fontFamily="@font/daray"
+        android:text="@string/songbook"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="120sp">
+
+        <ImageView
+            android:id="@+id/micro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="10dp"
+            app:srcCompat="@drawable/micro" />
+
+        <TextView
+            android:id="@+id/singertext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/micro"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/daray"
+            android:text="@string/singers"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="45sp" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/menu"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/menu" />
+
+    <ImageView
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/menu"
+        app:srcCompat="@drawable/plus" />
+
+    <EditText
+        android:id="@+id/findsinger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/finder"
+        android:layout_below="@+id/singers"
+        android:layout_margin="20dp"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:inputType="text"
+        android:hint="@string/findsinger"
+        android:textColor="@color/black"
+        android:fontFamily="@font/daray"
+        android:textSize="24sp"
+        android:padding="12dp"/>
+
+    <ListView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rec"
+        android:layout_below="@+id/findsinger"
+        android:layout_above="@+id/menu"
+        android:layout_marginHorizontal="22dp">
+    </ListView>
+
+
+</RelativeLayout>

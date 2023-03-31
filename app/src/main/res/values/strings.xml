@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Songbook</string>
+    <string name="songbook">Песенник</string>
+    <string name="singers">Исполнители</string>
+    <string name="findsong">Найти песню</string>
+    <string name="addsong">Добавить песню</string>
+    <string name="downloadsong">Скачанные песни</string>
+    <string name="findsinger">найти исполнителя</string>
+    <string name="songs">Песни</string>
+    <string name="findsongs">найти песню</string>
+    <string name="newsong">Новая песня</string>
+    <string name="singer">Введите исполнителя</string>
+    <string name="nothing">Пустое поле</string>
+    <string name="singertext">Исполнитель:</string>
+    <string name="local">Пользовательская</string>
+    <string name="publicsong">Общедоступная</string>
+    <string name="autoscroll">Автопрокрутка: </string>
+    <string name="autoscrollvalue">0</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Зарегистрироваться</string>
+    <string name="getin">Войти</string>
+    <string name="logout">Выйти из аккаунта</string>
+</resources>

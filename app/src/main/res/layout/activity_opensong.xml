@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".opensong">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/rounded">
+
+        <ImageView
+            android:id="@+id/nota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="3dp"
+            app:srcCompat="@drawable/nota" />
+
+        <TextView
+            android:id="@+id/songname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/nota"
+            android:fontFamily="@font/daray"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:padding="5dp"
+            android:background="@null"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/autoscroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="22dp">
+
+        <TextView
+            android:id="@+id/autoscrolltext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/autoscroll"
+            android:textSize="24sp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/daray"
+            android:layout_marginEnd="5dp"/>
+
+        <EditText
+            android:id="@+id/autoscrollvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:inputType="text"
+            android:background="@drawable/rec"
+            android:layout_toEndOf="@+id/autoscrolltext"
+            android:text="@string/autoscrollvalue"
+            android:fontFamily="@font/daray"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:padding="12dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rec"
+        android:layout_below="@+id/autoscroll"
+        android:layout_above="@+id/back"
+        android:textColor="@color/black"
+        android:fontFamily="@font/daray"
+        android:textSize="24sp"
+        android:padding="8dp"
+        android:layout_marginHorizontal="22dp"
+        android:overScrollMode="always"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false">
+    </TextView>
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/am"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/minus"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/am" />
+
+    <ImageView
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/plus"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/minus" />
+
+    <ImageView
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/edit"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/plus" />
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/edit" />
+
+
+</RelativeLayout>
