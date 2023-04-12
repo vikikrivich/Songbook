@@ -14,12 +14,12 @@
         android:background="@drawable/rounded">
 
         <ImageView
-            android:id="@+id/plus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="3dp"
-            app:srcCompat="@drawable/plus_1" />
+            android:id="@+id/picture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginVertical="10dp"
+            app:srcCompat="@drawable/nota" />
 
         <EditText
             android:id="@+id/songname"
@@ -28,37 +28,68 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginEnd="10dp"
-            android:layout_toEndOf="@+id/plus"
+            android:layout_toEndOf="@+id/picture"
             android:fontFamily="@font/daray"
-            android:hint="@string/newsong"
+            android:hint="@string/namee"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:padding="5dp"
             android:background="@null"/>
-
-
     </RelativeLayout>
 
-    <ToggleButton
-        android:id="@+id/togglebutton"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/add"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/head"
-        android:background="@drawable/toggle"
-        android:textOn="@string/local"
-        android:textOff="@string/publicsong"
-        android:fontFamily="@font/daray"
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
-        android:paddingHorizontal="8dp"
-        android:textSize="22sp"/>
+        android:layout_marginHorizontal="22dp">
+
+        <ToggleButton
+            android:id="@+id/togglebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toggle"
+            android:textOn="@string/local"
+            android:textOff="@string/publicsong"
+            android:fontFamily="@font/daray"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="22dp"
+            android:paddingHorizontal="8dp"
+            android:textSize="22sp"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            style="@style/TextStyleDaray"
+            android:id="@+id/fontfam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/togglebutton"
+            android:layout_marginStart="15dp"
+            android:text="@string/fontfam"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"/>
+
+        <ToggleButton
+            style="@style/TextStyleDaray"
+            android:id="@+id/chooseFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rec"
+            android:layout_toEndOf="@+id/fontfam"
+            android:layout_marginStart="5dp"
+            android:textOff="@string/daray"
+            android:textOn="@string/auto"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/singer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/togglebutton"
+        android:layout_below="@+id/add"
         android:layout_marginVertical="10dp"
         android:layout_marginHorizontal="22dp">
 
@@ -91,33 +122,31 @@
 
     <ImageView
         android:id="@+id/back"
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="10dp"
         app:srcCompat="@drawable/back" />
 
     <ImageView
-        android:id="@+id/am"
-        android:layout_width="wrap_content"
+        android:id="@+id/minus"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/t"
-        android:layout_marginEnd="5dp"
-        app:srcCompat="@drawable/am" />
+        android:layout_toStartOf="@+id/plusbut"
+        app:srcCompat="@drawable/minus" />
 
     <ImageView
-        android:id="@+id/t"
-        android:layout_width="wrap_content"
+        android:id="@+id/plusbut"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/ok"
-        android:layout_marginEnd="5dp"
-        app:srcCompat="@drawable/t" />
+        app:srcCompat="@drawable/plus" />
 
     <ImageView
         android:id="@+id/ok"
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
@@ -127,7 +156,7 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:inputType="textMultiLine"
+        android:inputType="textCapSentences|textMultiLine"
         android:layout_marginHorizontal="22dp"
         android:background="@drawable/rec"
         android:layout_below="@+id/singer"

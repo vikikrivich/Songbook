@@ -2,7 +2,9 @@ package com.example.songbook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainActivity.this, singers.class);
+            intent.putExtra(Constant.DOWNLOAD, "no");
             startActivity(intent);
         }
     };
@@ -54,13 +57,15 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             Intent intent = new Intent(MainActivity.this, songs.class);
             intent.putExtra(Constant.SINGER, "Песни");
+            intent.putExtra(Constant.DOWNLOAD, "no");
             startActivity(intent);
         }
     };
     View.OnClickListener oclmysongs = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(MainActivity.this, mysongs.class);
+            Intent intent = new Intent(MainActivity.this, singers.class);
+            intent.putExtra(Constant.DOWNLOAD, "yes");
             startActivity(intent);
         }
     };
@@ -71,6 +76,13 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(Constant.SONG_NAME, "");
             intent.putExtra(Constant.SONG_TEXT, "");
             intent.putExtra(Constant.SONG_SINGER, "");
+            ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+            if (cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected()){
+                intent.putExtra(Constant.DOWNLOAD, "no");
+            } else {
+                intent.putExtra(Constant.DOWNLOAD, "yes");
+            }
             startActivity(intent);
         }
     };

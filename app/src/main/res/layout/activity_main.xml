@@ -13,152 +13,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginVertical="30dp"
         android:background="@drawable/rounded"
         android:fontFamily="@font/daray"
         android:text="@string/songbook"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="120sp" />
-
-
-    <RelativeLayout
-        android:id="@+id/findsong"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linetop"
-        android:layout_marginVertical="30dp">
-
-
-        <ImageView
-            android:id="@+id/lupa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            app:srcCompat="@drawable/lupa" />
-
-        <TextView
-            android:id="@+id/findsongbut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/lupa"
-            android:layout_centerInParent="true"
-            android:fontFamily="@font/daray"
-            android:text="@string/findsong"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="50sp" />
-
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/linetop"
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:layout_above="@+id/singers"
-        android:layout_marginHorizontal="80dp"
-        android:background="@color/black"/>
-
-    <RelativeLayout
-        android:id="@+id/singers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/songbook"
-        android:layout_marginVertical="30dp">
-
-        <ImageView
-            android:id="@+id/micro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:layout_alignParentRight="true"
-            app:srcCompat="@drawable/micro" />
-
-        <TextView
-            android:id="@+id/singersbut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toStartOf="@+id/micro"
-            android:layout_centerInParent="true"
-            android:layout_marginHorizontal="10dp"
-            android:fontFamily="@font/daray"
-            android:text="@string/singers"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="50sp" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/downloadsong"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/songbook"
-        android:layout_marginVertical="30dp">
-
-        <ImageView
-            android:id="@+id/nota"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_alignParentRight="true"
-            app:srcCompat="@drawable/nota" />
-
-        <TextView
-            android:id="@+id/mysongsbut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toStartOf="@+id/nota"
-            android:layout_centerInParent="true"
-            android:fontFamily="@font/daray"
-            android:text="@string/downloadsong"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="50sp" />
-
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/linebottom"
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="80dp"
-        android:layout_below="@+id/downloadsong"
-        android:background="@color/black"/>
-
-    <RelativeLayout
-        android:id="@+id/addsong"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linebottom"
-        android:layout_marginVertical="20dp">
-
-        <ImageView
-            android:id="@+id/plus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            app:srcCompat="@drawable/plus_1" />
-
-        <TextView
-            android:id="@+id/addsongbut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/plus"
-            android:layout_centerInParent="true"
-            android:layout_marginHorizontal="10dp"
-            android:fontFamily="@font/daray"
-            android:text="@string/addsong"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="50sp" />
-
-    </RelativeLayout>
+        android:paddingVertical="15dp"
+        android:textSize="80sp" />
 
     <TextView
-        android:id="@+id/logout"
+        android:id="@+id/invis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/toggle"
         android:padding="12dp"
@@ -166,6 +33,174 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:fontFamily="@font/daray"
-        android:layout_below="@+id/addsong" />
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/topblock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/songbook"
+        android:layout_below="@+id/invis">
+
+        <RelativeLayout
+            android:id="@+id/findsong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp">
+
+
+            <ImageView
+                android:id="@+id/lupa"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                app:srcCompat="@drawable/lupa" />
+
+            <TextView
+                android:id="@+id/findsongbut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/lupa"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/daray"
+                android:text="@string/findsong"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/linefindsong"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="80dp"
+            android:background="@color/black"/>
+
+        <RelativeLayout
+            android:id="@+id/singers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="40dp">
+
+            <ImageView
+                android:id="@+id/micro"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="30dp"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/micro" />
+
+            <TextView
+                android:id="@+id/singersbut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/micro"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/daray"
+                android:text="@string/singers"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomblock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/songbook"
+        android:layout_above="@+id/logout">
+
+        <RelativeLayout
+            android:id="@+id/downloadsong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="40dp">
+
+            <ImageView
+                android:id="@+id/nota"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="30dp"
+                android:layout_alignParentRight="true"
+                android:minHeight="10dp"
+                android:maxHeight="20dp"
+                app:srcCompat="@drawable/download" />
+
+            <TextView
+                android:id="@+id/mysongsbut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/nota"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/daray"
+                android:text="@string/downloadsong"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/linebottom"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginVertical="150dp"
+            android:layout_marginHorizontal="80dp"
+            android:layout_centerVertical="true"
+            android:background="@color/black"/>
+
+        <RelativeLayout
+            android:id="@+id/addsong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="20dp">
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                app:srcCompat="@drawable/plus_1" />
+
+            <TextView
+                android:id="@+id/addsongbut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/plus"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/daray"
+                android:text="@string/addsong"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/toggle"
+        android:padding="12dp"
+        android:text="@string/logout"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:fontFamily="@font/daray" />
+
+
 
 </RelativeLayout>

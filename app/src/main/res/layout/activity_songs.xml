@@ -19,18 +19,18 @@
         android:textSize="120sp">
 
         <ImageView
-            android:id="@+id/micro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
+            android:id="@+id/picture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
             android:layout_marginVertical="10dp"
-            app:srcCompat="@drawable/micro" />
+            app:srcCompat="@drawable/nota" />
 
         <TextView
             android:id="@+id/singertext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/micro"
+            android:layout_toEndOf="@+id/picture"
             android:layout_centerInParent="true"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/daray"
@@ -43,20 +43,11 @@
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/menu"
-        app:srcCompat="@drawable/back" />
-
-    <ImageView
         android:id="@+id/menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginHorizontal="80dp"
+        android:layout_marginHorizontal="3dp"
         android:layout_marginTop="20dp"
         app:srcCompat="@drawable/menu" />
 
@@ -65,7 +56,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/menu"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="3dp"
         app:srcCompat="@drawable/plus" />
 
     <EditText

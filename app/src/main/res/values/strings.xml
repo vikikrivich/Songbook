@@ -21,4 +21,9 @@
     <string name="login">Зарегистрироваться</string>
     <string name="getin">Войти</string>
     <string name="logout">Выйти из аккаунта</string>
+    <string name="namee">Название</string>
+    <string name="fontfam">Шрифт:</string>
+    <string name="ok">OK</string>
+    <string name="daray">Daray</string>
+    <string name="auto">Auto</string>
 </resources>

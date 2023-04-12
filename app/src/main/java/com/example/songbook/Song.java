@@ -3,26 +3,26 @@ package com.example.songbook;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.lang.reflect.Array;
 
 @IgnoreExtraProperties
-public class Song {
-    public String access, singer, songname, text;
+public class Song extends OutputStream {
+    public String singer, songname, text;
     public Song () {}
-    public Song(String access, String singer, String songname, String text) {
-        this.access = access;
+
+    @Override
+    public void write(int b) throws IOException {
+
+    }
+
+    public Song(String singer, String songname, String text) {
         this.singer = singer;
         this.songname = songname;
         this.text = text;
     }
 
-    public String getAccess() {
-        return access;
-    }
-
-    public void setAccess(String access) {
-        this.access = access;
-    }
 
     public String getSinger() {
         return singer;
