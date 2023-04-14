@@ -123,8 +123,7 @@
         android:scrollbars="vertical"
         android:layout_marginHorizontal="22dp"
         android:overScrollMode="always"
-        android:scrollHorizontally="false">
-    </TextView>
+        android:scrollHorizontally="false" />
 
     <ImageView
         android:id="@+id/delete"

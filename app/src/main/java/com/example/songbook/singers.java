@@ -139,6 +139,27 @@ public class singers extends AppCompatActivity {
         };
         mDatabase.child("public").addValueEventListener(vListener);
 
+        ValueEventListener lListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for(DataSnapshot ds: dataSnapshot.getChildren()){
+                    Song song = ds.getValue(Song.class);
+                    assert song != null;
+                    if (!listData.contains(song.singer)){
+                        listData.add(song.singer);
+                        listTemp.add(song);
+                    }
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        };
+        mDatabase.child("local").addValueEventListener(lListener);
 
     }
 

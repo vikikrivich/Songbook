@@ -78,13 +78,13 @@ public class opensong extends AppCompatActivity {
 
         if (listData.contains(name.getText().toString())) {
             download.setVisibility(GONE);
-            Drawable draw = ResourcesCompat.getDrawable(getResources(), R.drawable.download, null);
-            picture.setImageDrawable(draw);
         }
 
         if (downloadstr.equals("yes")) {
             getDataSQL();
             download.setVisibility(GONE);
+            Drawable draw = ResourcesCompat.getDrawable(getResources(), R.drawable.download, null);
+            picture.setImageDrawable(draw);
             delete.setOnClickListener(oclDeleteSQL);
         } else {
             getDataFirebase();
@@ -104,7 +104,6 @@ public class opensong extends AppCompatActivity {
         autoscroller.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
@@ -306,13 +305,11 @@ public class opensong extends AppCompatActivity {
 
     View.OnClickListener oclok = new View.OnClickListener() {
         @Override
-        public void onClick(View v){
-            ok.setVisibility(GONE);
-            Integer len = Integer.parseInt(autoscroller.getText().toString())*20000;
-            final ObjectAnimator animScrollToBottom = ObjectAnimator.ofInt(text, "scrollY", 0);
-            animScrollToBottom.setDuration(len);
+        public void onClick(View v) {
+            
         }
     };
+
     View.OnClickListener oclback = new View.OnClickListener() {
         @Override
         public void onClick(View view) {

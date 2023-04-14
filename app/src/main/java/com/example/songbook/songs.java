@@ -96,6 +96,7 @@ public class songs extends AppCompatActivity {
 
     private void init(){
         dbHelper = new DbHelper(this);
+        picture = findViewById(R.id.picture);
         name = findViewById(R.id.singertext);
         finder = findViewById(R.id.findsinger);
         menu = findViewById(R.id.menu);
@@ -257,7 +258,7 @@ public class songs extends AppCompatActivity {
             Intent intent = new Intent(songs.this, newsong.class);
             intent.putExtra(Constant.SONG_NAME, "");
             intent.putExtra(Constant.SONG_TEXT, "");
-            intent.putExtra(Constant.SONG_SINGER, name.getText().toString());
+            intent.putExtra(Constant.SONG_SINGER, "");
             ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
             if (cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected()){
                 intent.putExtra(Constant.DOWNLOAD, "no");
